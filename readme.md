@@ -4,13 +4,12 @@ This program simulates a model of DNA functionalized nano-particles.
 The program is written in C++,  and developed on a Linux system. 
 
 The model is based on a coarse-grained representation of the particles,
-where a colloidal particles are represented as soft-spheres with 
-r^-6, r^-12 or r^-18 (default) inverse power-law repulsion. 
-DNA strands are represented as "arms" that "hold hands"
-if and angle and distance criteria are meet. The DNA arms energies 
+where a colloidal particles are represented as soft repulsive-spheres, and 
+DNA strands are represented as "arms" that "hold hands" with one other
+if an angle and distance criteria is meet. The DNA arms energies 
 are modeled as truncated harmonic potentials.
 
-The phase space is sampled using Monte Carlo simulations, where the
+Trajectories are generated using Monte Carlo simulations, where the
 orientation of the particles represented using quaternions. Simulations can 
 be done in the canonical ensemble (NVT), grand canonical ensemble (µVT), or in the
 isothermal-isobaric ensemble (NpT). The latter can be done using different
@@ -18,7 +17,7 @@ types of volume changes such as isotropic, anisotropic, or only in z-direction.
 Finally, simulations can be done with a harmonic potential bias potential on the
 number of particles, N, kappa(N-N_0)^2.
 
-Thermodynamic information is stored in a file. 
+Thermodynamic information is written to a file. 
 The particle trajectories are saved in the `xyz` format and as VMD files.
 A range of orientation order-parameters can be calculated on the fly.
 These include the Legendre polynomials, qubatic, and Hexgonal-diamond.
@@ -407,3 +406,4 @@ Write final configuration to end.xyz and end.vmd.
 Variable string: ../../bin/dna_colloid   --verbose=9 --seed=1 --kT=1 --chem_pot=0 --time=0 --bboxX=6 --bboxY=6 --bboxZ=6 --pair_eps=1 --pair_sigma=1 --arm_eps=1 --arm_r_center=1 --arm_r_width=0.2 --max_angle=40 --pair_12_eps=0 --pair_6_eps=0 --pair_4_eps=0 --cut_distance=1.2 --only_bind_to_lowest_arm_energy=0 --num_extra_sticky_spots=0 --type_of_orientational_order=1 --enable_orientational_order_threshold=0 --orientational_order_threshold_max=1.25 --orientational_order_threshold_min=0.75 --umbrella_orientational_order_kappa=0 --umbrella_orientational_order_center=0 --skin_distance=0.3 --num_added_particles=0 --print_random_numbers=0 --print_pair_num_points=250 --print_angle_num_points=180 --load_input_file=1 --read_time_from_input=0 --read_bbox_from_input=0 --read_kT_from_input=0 --coordinate_scaling=1 --type_of_volume_move=0 --delta_L_max=0.01 --pressure=0 --num_volume_moves_per_step=1 --umb_num_par=0 --pin_particles=0 --max_step_size_translation=0.1 --max_step_size_rotation=0.1 --num_steps=100000 --moves_per_mc_step=1 --print_ener_freq=10 --print_conf_freq=100 --print_vmd_freq=10000 --type_of_vmd_color=0
 Happy ending of  ../../bin/dna_colloid
 ```
+
