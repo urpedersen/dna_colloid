@@ -387,17 +387,17 @@ void Sim::print_energy(){
 string Sim::get_ener_string(){
 	stringstream out;
 
-	out << time                            << " " ;
-	out << potential.get_internal_energy() << " " ;
-	out << particles.size()                << " " ;
-	out << get_volume()				 	   << " " ;
-	out << bbox.at(0)                      << " " ;
-	out << bbox.at(1)                      << " " ;
-	out << bbox.at(2)                      << " " ;
-	out << potential.get_orientational_order()        << " " ;
-	out << potential.get_orientational_order_energy() << " " ;
-	out << potential.get_pinning_energy()  << " " ;
-	out << potential.get_total_energy()    << " " ;
+	out << time                            << " " ;      // 1
+	out << potential.get_internal_energy() << " " ;    // 2
+	out << particles.size()                << " " ;  // 3
+	out << get_volume()				 	   << " " ;  // 4
+	out << bbox.at(0)                      << " " ;  // 5
+	out << bbox.at(1)                      << " " ;  // 6
+	out << bbox.at(2)                      << " " ;  // 7
+	out << potential.get_orientational_order()        << " " ;  // 8
+	out << potential.get_orientational_order_energy() << " " ;  // 9
+	out << potential.get_pinning_energy()  << " " ;  // 10
+	out << potential.get_total_energy()    << " " ;  // 11
 	return out.str ( ) ;
 }
 
@@ -752,9 +752,6 @@ double Sim::get_avg_pair_list_length(){
  *
  * Input:
  *   maximum step size
- *
- *
- *   TODO when particles are moved, the arms_variable should be updated
  */
 int Sim::attempt_a_move_translation ( double *max_step_size ) {
 
@@ -909,7 +906,7 @@ int Sim::attempt_a_move_rotation(double *max_step_size){
 
 /**
  * Attempt a volume change. To produce NpT ensemble.
- * Rebuild simulation // TODO maybe the update of the simulation box when changing box size maybe optimized
+ * Rebuild simulation
  */
 int Sim::attempt_a_move_volume ( ) {
 
