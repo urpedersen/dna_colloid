@@ -3,7 +3,7 @@
 This program simulates a model of DNA functionalized nano-particles.
 The program is written in C++,  and developed on a Linux system. 
 
-The model is based on a coarse-grained representation of the particles,
+The model is a coarse-grained representation,
 where a colloidal particles are represented as soft repulsive-spheres, and 
 DNA strands are represented as "arms" that "hold hands" with one other
 if an angle and distance criteria is meet. The DNA arms energies 
