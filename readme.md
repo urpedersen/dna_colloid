@@ -26,8 +26,8 @@ These include the Legendre polynomials, qubatic, and Hexgonal-diamond.
 ## Model details
 
 Let $N$ be the number of particles, $Z$ the number of strands per particle, 
-$\vec{r}_{ij}$ the vector pointing from particle $i$ to $j$, 
-$r_{ij} = |\vec{r}_{ij}|$, and $\beta^{-1} = k_B T$. The Hamiltonian is expressed as:
+${\bf r}_{ij}$ the vector pointing from particle $i$ to $j$, 
+$r_{ij} = |{\bf r}_{ij}|$, and $\beta^{-1} = k_B T$. The Hamiltonian is expressed as:
 
 $$
 \beta U = \frac{1}{2} \sum_{i=1}^N \left( \sum_{j=1}^N u_{ij}^{\text{r}} + \sum_{a=1}^Z u_{ia}^{\text{b}} \right)
