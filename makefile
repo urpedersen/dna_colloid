@@ -2,8 +2,11 @@
 CXX = g++
 CXXFLAGS = -O3
 SRC_DIR = src
+
 BIN_DIR = bin
 TARGET = $(BIN_DIR)/dna_colloid
+
+EXAMPLES_DIR = examples/default
 
 # Find all .cpp files in the src directory
 SRCS = $(wildcard $(SRC_DIR)/*.cpp)
@@ -20,5 +23,9 @@ $(TARGET): $(SRCS)
 clean:
 	rm -rf $(BIN_DIR)
 
+# Clean example files
+clean_examples:
+	cd $(EXAMPLES_DIR) && rm -f *.vmd *.dat restart.xyz end.xyz conf.xyz
+
 # Phony targets to avoid conflict with files
-.PHONY: all clean
+.PHONY: all clean clean_examples
