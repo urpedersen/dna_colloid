@@ -57,7 +57,9 @@ $$
 
 ### Bonding Strands
 
-Bonds between strands are modeled as truncated springs. Let $\mathbf{v}_{ia}$ be a vector from the center of particle $i$ in the direction of the $a$-th strand, and $\sin^2(\theta_{ija}) = 1 - (\hat{\mathbf{r}}_{ij} \cdot \hat{\mathbf{v}}_{ia})^2$. The bond distance $d_{iajb}^2$ is given by:
+Bonds between strands are modeled as truncated springs. 
+Let $v_{ia}$ be a normal vector from the center of particle $i$ in the direction of the $a$-th strand, 
+and $\sin^2(\theta_{ija}) = 1 - (r_{ij} \cdot v_{ia})^2$. The bond distance $d_{iajb}^2$ is given by:
 
 $$
 d_{iajb}^2 = \frac{(r_{ij} - \sigma_\text{b})^2}{r_\text{max}^2} + \frac{\sin^2(\theta_{ija}) + \sin^2(\theta_{jib})}{\sin^2(\theta_\text{max})}
