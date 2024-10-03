@@ -216,10 +216,22 @@ The program writes the final configuration to the `end.vmd` file, and
 trajectories as `conf0.vmd, conf1.vmd, ...` files. These can be visualized with VMD.
 Use the `print_vmd_freq` input variable to set the frequency of the output.
 
+To view the final configuration in VMD (https://www.ks.uiuc.edu/Research/vmd):
+
+```sh
+vmd end.xyz
+```
+
+In the vmd-console, type:
+
+```tcl
+source end.vmd
+```
+
 ##### Network
 
 The output file `network.dat` contains the network of connected particles.
-Below is an example of the file format:
+Below is an example of the first of a file:
 
 ```
 54 160 100

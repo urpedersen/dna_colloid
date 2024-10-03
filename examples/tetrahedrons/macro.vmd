@@ -1,0 +1,275 @@
+# VMD for LINUXAMD64, version 1.9.4a51 (February 19, 2023)
+# Log file '/home/urp/CLionProjects/dna_colloid/examples/tetrahedrons/macro.vmd', created by user urp
+menu files off
+menu files on
+display resetview
+mol addrep 0
+display resetview
+mol new {/home/urp/CLionProjects/dna_colloid/examples/tetrahedrons/end.xyz} type {xyz} first 0 last -1 step 1 waitfor 1
+animate style Loop
+source vmd.tcl
+menu graphics off
+menu graphics on
+mol showrep 0 0 0
+menu tkcon off
+menu tkcon on
+menu color off
+menu color on
+color Display Background white
+menu color off
+menu tkcon off
+menu graphics off
+menu files off
+rotate x by -0.666667
+rotate x by -0.266667
+rotate x by -0.333333
+rotate x by -0.133333
+rotate x by -0.333333
+rotate x by -0.133333
+rotate x by -0.666667
+rotate x by -0.266667
+rotate x by -0.333333
+rotate x by -0.133333
+rotate x by -1.333333
+rotate x by -0.533333
+rotate x by -1.000000
+rotate x by -0.400000
+rotate x by -1.000000
+rotate x by -0.400000
+rotate x by -1.000000
+rotate x by -0.400000
+rotate x by -0.666667
+rotate x by -0.266667
+rotate x by -1.000000
+rotate x by -0.400000
+rotate x by -0.666667
+rotate x by -0.266667
+rotate x by -1.333333
+rotate x by -0.533333
+rotate x by -0.666667
+rotate x by -0.266667
+rotate x by -1.000000
+rotate y by -0.333333
+rotate x by -0.400000
+rotate y by -0.133333
+rotate x by -0.666667
+rotate x by -0.266667
+rotate x by -0.666667
+rotate x by -0.266667
+rotate x by -1.333333
+rotate y by -0.333333
+rotate x by -0.533333
+rotate y by -0.133333
+rotate x by -1.000000
+rotate y by -0.333333
+rotate x by -0.400000
+rotate y by -0.133333
+rotate x by -1.333333
+rotate x by -0.533333
+rotate x by -1.000000
+rotate x by -0.400000
+rotate x by -0.666667
+rotate x by -0.266667
+rotate x by -0.666667
+rotate x by -0.266667
+rotate x by -1.000000
+rotate y by -0.333333
+rotate x by -0.400000
+rotate y by -0.133333
+rotate x by -0.666667
+rotate x by -0.266667
+rotate x by -0.666667
+rotate x by -0.266667
+rotate x by -0.333333
+rotate x by -0.133333
+rotate x by -1.000000
+rotate x by -0.400000
+rotate x by -0.666667
+rotate x by -0.266667
+rotate x by -0.666667
+rotate x by -0.266667
+rotate x by -0.666667
+rotate x by -0.266667
+rotate x by -0.666667
+rotate x by -0.266667
+rotate x by -0.333333
+rotate x by -0.133333
+rotate x by -0.666667
+rotate x by -0.266667
+rotate x by -0.666667
+rotate x by -0.266667
+rotate x by -0.333333
+rotate x by -0.133333
+rotate x by -0.666667
+rotate x by -0.266667
+rotate x by -1.333333
+rotate x by -0.533333
+rotate x by -0.666667
+rotate x by -0.266667
+rotate x by -0.666667
+rotate x by -0.266667
+rotate x by -1.000000
+rotate y by 0.333333
+rotate x by -0.400000
+rotate y by 0.133333
+rotate x by -0.666667
+rotate y by 0.666667
+rotate x by -0.266667
+rotate y by 0.266667
+rotate x by -1.000000
+rotate x by -0.400000
+rotate x by -0.333333
+rotate y by 0.333333
+rotate x by -0.133333
+rotate y by 0.133333
+rotate x by -0.333333
+rotate x by -0.133333
+rotate x by -1.333333
+rotate y by 0.333333
+rotate x by -0.533333
+rotate y by 0.133333
+rotate x by -0.666667
+rotate x by -0.266667
+rotate x by -0.666667
+rotate y by 0.333333
+rotate x by -0.266667
+rotate y by 0.133333
+rotate x by -0.666667
+rotate y by 0.666667
+rotate x by -0.266667
+rotate y by 0.266667
+rotate x by -1.000000
+rotate x by -0.400000
+rotate x by -1.333333
+rotate x by -0.533333
+rotate x by -1.000000
+rotate x by -0.400000
+rotate x by -1.666667
+rotate y by 0.666667
+rotate x by -0.666667
+rotate y by 0.266667
+rotate x by -1.000000
+rotate y by 0.666667
+rotate x by -0.400000
+rotate y by 0.266667
+rotate x by -0.333333
+rotate x by -0.133333
+rotate x by -1.000000
+rotate y by 0.333333
+rotate x by -0.400000
+rotate y by 0.133333
+rotate x by -0.666667
+rotate x by -0.266667
+rotate x by -1.000000
+rotate y by 0.333333
+rotate x by -0.400000
+rotate y by 0.133333
+rotate x by -0.666667
+rotate x by -0.266667
+rotate x by -1.000000
+rotate x by -0.400000
+rotate x by -0.666667
+rotate x by -0.266667
+rotate x by -0.666667
+rotate y by 0.333333
+rotate x by -0.266667
+rotate y by 0.133333
+rotate x by -0.333333
+rotate x by -0.133333
+rotate x by -0.333333
+rotate x by -0.133333
+rotate x by -1.000000
+rotate x by -0.400000
+rotate x by -0.333333
+rotate x by -0.133333
+rotate x by -0.333333
+rotate x by -0.133333
+rotate x by -1.000000
+rotate x by -0.400000
+rotate x by -0.666667
+rotate x by -0.266667
+rotate x by -0.666667
+rotate x by -0.266667
+rotate x by -0.333333
+rotate x by -0.133333
+rotate x by -0.333333
+rotate x by -0.133333
+rotate x by -0.666667
+rotate x by -0.266667
+rotate x by -0.666667
+rotate x by -0.266667
+rotate x by -0.333333
+rotate x by -0.133333
+rotate x by -1.333333
+rotate x by -0.533333
+rotate x by -0.333333
+rotate y by -0.333333
+rotate x by -0.133333
+rotate y by -0.133333
+rotate x by -0.333333
+rotate y by -0.333333
+rotate x by -0.133333
+rotate y by -0.133333
+rotate x by -0.333333
+rotate y by -0.333333
+rotate x by -0.133333
+rotate y by -0.133333
+rotate x by -0.333333
+rotate y by -0.333333
+rotate x by -0.133333
+rotate y by -0.133333
+rotate x by -0.333333
+rotate y by -0.333333
+rotate x by -0.133333
+rotate y by -0.133333
+rotate x by -0.333333
+rotate y by -0.333333
+rotate x by -0.133333
+rotate y by -0.133333
+rotate y by -0.333333
+rotate y by -0.133333
+rotate y by -0.333333
+rotate y by -0.133333
+rotate y by -0.333333
+rotate y by -0.133333
+rotate x by 0.333333
+rotate y by -0.333333
+rotate x by 0.133333
+rotate y by -0.133333
+rotate y by -0.333333
+rotate y by -0.133333
+rotate x by 0.333333
+rotate y by -0.333333
+rotate x by 0.133333
+rotate y by -0.133333
+rotate x by 0.333333
+rotate y by -0.333333
+rotate x by 0.133333
+rotate y by -0.133333
+rotate z by 0.333333
+rotate z by 0.133333
+rotate z by 0.333333
+rotate z by 0.133333
+scale by 1.200000
+scale by 1.200000
+scale by 0.833000
+axes location Off
+rotate z by 0.333333
+rotate z by 0.133333
+rotate z by 0.666667
+rotate z by 0.266667
+rotate z by 0.333333
+rotate z by 0.133333
+rotate z by -0.333333
+rotate z by -0.133333
+rotate z by -0.333333
+rotate z by -0.133333
+rotate z by -0.333333
+rotate z by -0.133333
+menu render off
+menu render on
+render POV3 vmdscene.pov povray +W%w +H%h -I%s -O%s.tga +D +X +A +FT
+# VMD for LINUXAMD64, version 1.9.4a51 (February 19, 2023)
+# end of log file.
+
+exit
