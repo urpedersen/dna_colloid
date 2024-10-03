@@ -64,7 +64,7 @@ $$
 d_{iajb}^2 = \frac{(r_{ij} - \sigma_\text{b})^2}{r_\text{max}^2} + \frac{\sin^2(\theta_{ija}) + \sin^2(\theta_{jib})}{\sin^2(\theta_\text{max})}
 $$
 
-The strand bond energy is:
+The strand bond energy is a truncated harmonic potential (truncated spring):
 
 $$
 u^\text{b}_{ia} = \varepsilon \sum_{j=1}^N \sum_{b=1}^Z (d_{iajb}^2 - 1) H(1 - d_{iajb}^2) h_{iajb}
