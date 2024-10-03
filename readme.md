@@ -26,56 +26,57 @@ a hexagonal diamond lattice).
 
 ## Model details
 
-Let \( N \) be the number of particles, \( Z \) the number of strands per particle, \( \mathbf{r}_{ij} \) the vector pointing from particle \( i \) to \( j \), \( r_{ij} = |\mathbf{r}_{ij}| \), and \( \beta^{-1} = k_B T \). The Hamiltonian is expressed as:
+Let $N$ be the number of particles, $Z$ the number of strands per particle, $\mathbf{r}_{ij}$ the vector pointing from particle $i$ to $j$, $r_{ij} = |\mathbf{r}_{ij}|$, and $\beta^{-1} = k_B T$. The Hamiltonian is expressed as:
 
-\[
+$$
 \beta U = \frac{1}{2} \sum_{i=1}^N \left( \sum_{j=1}^N u_{ij}^{\text{r}} + \sum_{a=1}^Z u_{ia}^{\text{b}} \right)
-\]
+$$
 
-- \( u_{ij}^{\text{r}} \): Repulsive steric interactions between colloids and strands.
-- \( u_{ia}^{\text{b}} \): Bonding strands.
+- $u_{ij}^{\text{r}}$: Repulsive steric interactions between colloids and strands.
+- $u_{ia}^{\text{b}}$: Bonding strands.
 
-### Steric Interactions
+### Steric repulsions
 
 Steric interactions are modeled as repulsive inverse power laws:
 
-\[
+$$
 u_{ij}^{\text{r}} = \left( \frac{\sigma_\text{r}}{r_{ij}} \right)^n + S(r_{ij})
-\]
+$$
 
-where \( n \) controls the hardness and \( \sigma_\text{r} \) defines the range. The shift function \( S(r_{ij}) \) truncates the pair repulsion at \( r_\text{c} \) as follows:
+where $n$ controls the hardness and $\sigma_\text{r}$ defines the range. 
+The shift function $S(r_{ij})$ truncates the pair repulsion at $r_\text{c}$ as follows:
 
-\[
-S(r_{ij}) = 
-\begin{cases} 
+$$
+S(r_{ij}) =
+\begin{cases}
 -\left( \frac{\sigma_\text{r}}{r_\text{c}} \right)^n & \text{if } r_{ij} < r_\text{c} \\
 -\left( \frac{\sigma_\text{r}}{r_{ij}} \right)^n & \text{otherwise}
 \end{cases}
-\]
+$$
 
 ### Bonding Strands
 
-Bonds between strands are modeled as truncated springs. Let \( \mathbf{v}_{ia} \) be a vector from the center of particle \( i \) in the direction of the \( a \)-th strand, and \( \sin^2(\theta_{ija}) = 1 - (\hat{\mathbf{r}}_{ij} \cdot \hat{\mathbf{v}}_{ia})^2 \). The bond distance \( d_{iajb}^2 \) is given by:
+Bonds between strands are modeled as truncated springs. Let $\mathbf{v}_{ia}$ be a vector from the center of particle $i$ in the direction of the $a$-th strand, and $\sin^2(\theta_{ija}) = 1 - (\hat{\mathbf{r}}_{ij} \cdot \hat{\mathbf{v}}_{ia})^2$. The bond distance $d_{iajb}^2$ is given by:
 
-\[
+$$
 d_{iajb}^2 = \frac{(r_{ij} - \sigma_\text{b})^2}{r_\text{max}^2} + \frac{\sin^2(\theta_{ija}) + \sin^2(\theta_{jib})}{\sin^2(\theta_\text{max})}
-\]
+$$
 
 The strand bond energy is:
 
-\[
+$$
 u^\text{b}_{ia} = \varepsilon \sum_{j=1}^N \sum_{b=1}^Z (d_{iajb}^2 - 1) H(1 - d_{iajb}^2) h_{iajb}
-\]
+$$
 
-where \( H(x) \) is the Heaviside function, and \( h_{iajb} = 1 \) if strand \( ia \) bonds with strand \( jb \), and \( h_{iajb} = 0 \) otherwise.
+where $H(x)$ is the Heaviside function, and $h_{iajb} = 1$ if strand $ia$ bonds with strand $jb$, and $h_{iajb} = 0$ otherwise.
 
-Strands may only bind once, \( \sum_{jb} h_{iajb} = [0, 1] \), and bonding is consistent, \( h_{iajb} = h_{jbia} \). The bonding matrix \( h_{iajb} \) is chosen to minimize the total bonding energy.
+Strands may only bind once, $\sum_{jb} h_{iajb} = [0, 1]$, and bonding is consistent, $h_{iajb} = h_{jbia}$. The bonding matrix $h_{iajb}$ is chosen to minimize the total bonding energy.
 
 ## Build from source
 
 ### Get the source code
 
-Clone the repository hosted at github with
+Clone the repository hosted at GitHub with
 
 ```sh
 git clone https://github.com/urpedersen/dna_colloid.git
