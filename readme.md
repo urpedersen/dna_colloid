@@ -16,8 +16,12 @@ git clone https://github.com/urpedersen/dna_colloid.git
 
 The source code files are located in the `dna_colloid` directory.
 
+```sh
+cd dna_colloid
+```
+
 ### Build using make (linux)
-Build with make
+Build with make (in directory `dna_colloid` with the `makefile`)
 
 ```sh
 make
@@ -35,7 +39,7 @@ make clean
 
 ### My first run
 After the program is built, you should be able to run the examples
-located in the `./examples` folder.
+located in the `./examples` folder. 
 
 ```sh
 cd examples/default
