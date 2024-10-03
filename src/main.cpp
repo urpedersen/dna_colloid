@@ -1,11 +1,3 @@
-//============================================================================
-// Name        : mc_rigid.cpp
-// Author      : Ulf R. Pedersen
-// Version     :
-// Copyright   :  
-// Description :  
-//============================================================================
-
 #include <iostream>
 using namespace std;
 
