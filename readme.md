@@ -4,10 +4,10 @@ This program simulates a model of DNA functionalized nano-particles.
 The program is written in C++,  and developed on a Linux system. 
 
 The model is based on a coarse-grained representation of the particles,
-where a colloidal particles are represented as soft spheres with 
+where a colloidal particles are represented as soft-spheres with 
 r^-6, r^-12 or r^-18 (default) inverse power-law repulsion. 
 DNA strands are represented as "arms" that "hold hands"
-if and angle and distance criteria are met. The DNA arms energies 
+if and angle and distance criteria are meet. The DNA arms energies 
 are modeled as truncated harmonic potentials.
 
 The phase space is sampled using Monte Carlo simulations, where the
@@ -21,19 +21,20 @@ number of particles, N, kappa(N-N_0)^2.
 Thermodynamic information is stored in a file. 
 The particle trajectories are saved in the `xyz` format and as VMD files.
 A range of orientation order-parameters can be calculated on the fly.
-These include the Legendre polynomials, Qubatic, and Hexdia (for detecting
-a hexagonal diamond lattice).
+These include the Legendre polynomials, qubatic, and Hexgonal-diamond.
 
 ## Model details
 
-Let $N$ be the number of particles, $Z$ the number of strands per particle, $\mathbf{r}_{ij}$ the vector pointing from particle $i$ to $j$, $r_{ij} = |\mathbf{r}_{ij}|$, and $\beta^{-1} = k_B T$. The Hamiltonian is expressed as:
+Let $N$ be the number of particles, $Z$ the number of strands per particle, 
+$\vec{r}_{ij}$ the vector pointing from particle $i$ to $j$, 
+$r_{ij} = |\vec{r}_{ij}|$, and $\beta^{-1} = k_B T$. The Hamiltonian is expressed as:
 
 $$
 \beta U = \frac{1}{2} \sum_{i=1}^N \left( \sum_{j=1}^N u_{ij}^{\text{r}} + \sum_{a=1}^Z u_{ia}^{\text{b}} \right)
 $$
 
-- $u_{ij}^{\text{r}}$: Repulsive steric interactions between colloids and strands.
-- $u_{ia}^{\text{b}}$: Bonding strands.
+Here $u_{ij}^{\text{r}}$ is repulsive steric interactions between colloids and strands, and
+$u_{ia}^{\text{b}}$ is attractive bonding between strands.
 
 ### Steric repulsions
 
