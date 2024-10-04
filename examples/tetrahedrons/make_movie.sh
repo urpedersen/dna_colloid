@@ -11,7 +11,7 @@ for i in `awk 'BEGIN{while(i<4){print ++i}}'`;do
 	echo i=$i ifmt=$ifmt
 	
 	ln -fs conf$i.vmd vmd.tcl
-	vmd -dispdev text -e macro.vmd
+	vmd -size 800 600 -dispdev text -e macro.vmd
 	
 	convert vmdscene.pov.tga $odir/$ifmt.jpg
 done
